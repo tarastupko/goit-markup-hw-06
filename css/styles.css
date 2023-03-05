@@ -1,6 +1,7 @@
 :root {
     --card-set-gap: 24px;
     --card-set-gap-footer-social: 16px;
+    --card-set-gap-footer-info: 120px;
     --social-color: #F4F4FD;
     --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --accent-color: #404bbf;
@@ -619,7 +620,7 @@ section.section.our-portfolio {
 
 .info-block {
     display: flex;
-    gap: 120px;
+    gap: var(--card-set-gap-footer-info);
 }
 
 
@@ -648,7 +649,7 @@ section.section.our-portfolio {
     border-radius: 4px;
     transform: scale(1);
     transition: transform 500ms;
-
+    padding: 72px 24px 0 24px;
 }
 
 .modal-close
@@ -692,11 +693,11 @@ section.section.our-portfolio {
     background: #4D5AE5;
     border-radius: 4px;
     padding: 8px 24px;
-    flex-basis: calc((100% - var(--card-set-gap)*1) / 2);
     display: flex;
-        justify-content: center;
-        align-items: center;
-        border-color: transparent;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    width: 165px;
 }
 
 
@@ -720,7 +721,6 @@ section.section.our-portfolio {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     height: 40px;
-    margin: 0 8px 0 0;
     padding: 0;
     width: 264px;
     background: transparent;
@@ -729,14 +729,15 @@ section.section.our-portfolio {
 .footer-subscribe {
     width: 100%;
 }
-
-form.form-footer-subscribe {
+.footer-social-info {
     display: flex;
-    gap: var(--card-set-gap-footer-social);
-    flex-direction: row;
-    align-items: center;
+    gap: 80px;
 }
 
+.footer-subscribe-form {
+    display: flex;
+    gap: 24px;
+}
 span.Subscribe-text {
     font-weight: 500;
     color: #fff;
@@ -755,15 +756,9 @@ span.Subscribe-text {
     line-height: 1.5;
 }
 
-.modal-form input {
-    width: 100%;
-    margin-top: 4px;
-    height: 40px;
-}
 
-.modal-form {
-    margin-top: 16px;
-}
+
+
 
 .modal-form label {
     color: #8E8F99;
@@ -981,7 +976,7 @@ span.Subscribe-text {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
-
+    cursor: pointer;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border: none;
     border-radius: 4px;
